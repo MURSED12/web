@@ -1,152 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aadipom Computer</title>
 
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family:'Arial Narrow', Arial, sans-serif;
-        }
-        body{
-            color: #5d866c;
-            background: #e6d8c3;
-        }
-        .navbar{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #c2a68c;
-            margin-left: 2rem;
-            margin-right: 2rem;
-            border-radius: 15px;
-            height: 35px;
-            
-        }
-        .logo{
-            color: whitesmoke;
-            font-size: 23px;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding-left: 1rem;
-            
-        }
-        .nav-links{
-            list-style: none;
-            display: flex;
-            gap: 20px;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
 
-        }
-        .nav-links a{
-            text-decoration: none;
-            color: whitesmoke;
-            padding-right: 1rem;
+    body {
+      color: #4d6b58;
+      background: #f2e6d8;
+      line-height: 1.6;
+    }
 
-        } 
-        .header{
-            text-align: center;
-        }
-        .course{
-            text-align: center;
-        }
-        .form{
-            text-align: center;
-        }
-        .news{
-            text-align: center;
-        }
-        .index{
-            text-align: center;
-        }
-        .marquee{
-            text-align: center;
-        }
-        .image{
-            text-align: center;
-        }
-    </style>
+    /* 🔹 Navbar Styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #b99173;
+      padding: 10px 30px;
+      border-radius: 15px;
+      margin: 15px 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      color: white;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #ffe3c0, #b3733a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #e5c1a0;
+      color: #3e2b22;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    /* 🔹 Content Sections */
+    section {
+      text-align: center;
+      margin: 40px auto;
+      max-width: 900px;
+      background: #fffdf9;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #5d866c;
+      margin-bottom: 15px;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      font-size: 15px;
+      color: #555;
+    }
+
+    img {
+      max-width: 80%;
+      border-radius: 15px;
+      margin-top: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      background: #c2a68c;
+      color: white;
+      font-size: 14px;
+      border-radius: 15px 15px 0 0;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      section {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
-
 <body>
-    <nav class="navbar">
-        <div class="logo">aadipom</div>
-        <ul class="nav-links">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">CONTACT</a></li>
-            <li><a href="#">ABOUT</a></li>
-        </ul>
-    </nav>
 
-    <div class="header">
-        <h1 class="sub">welcome to aadipom computer</h1>
-        <pre>
-            Our Computer Academy provides high-quality training in basic to advanced computer skills.
-            We offer courses like MS Office, Internet, Programming, Web Designing, and Tally.
-            Our aim is to give students practical knowledge with career-oriented learning.
-            We focus on personal attention, experienced teachers, and affordable fees.
-            
-        <pre>
-    </div>
+  <!-- 🔸 Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Aadipom</div>
+    <ul class="nav-links">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">CONTACT</a></li>
+      <li><a href="#">ABOUT</a></li>
+    </ul>
+  </nav>
 
-    <div class="course">
-        <h1>COURSE PAGE</h1>
-        our courses are given here.<br>
-         <IMG SRC="COURSE PAGE TITLE.png">
-         <A HREF="coursepage.html" TARGET="_BLANK">
-         <BR>click here</a>
-    </div>
+  <!-- 🔸 Header -->
+  <section class="header">
+    <h1>Welcome to Aadipom Computer</h1>
+    <pre>
+Our Computer Academy provides high-quality training in basic to advanced computer skills.
+We offer courses like MS Office, Internet, Programming, Web Designing, and Tally.
+Our aim is to give students practical knowledge with career-oriented learning.
+We focus on personal attention, experienced teachers, and affordable fees.
+    </pre>
+  </section>
 
-    <div class="form">
-        <h1>ENQUIRY FORM</h1>
-        <pre>
-        Join <b>aadipom computer academy</b> today and build your computer skills
-        with expert training in MS Office, Tally, Programming & Web Designing.
-        Fill up the form now to book your seat and start learning with us!
-        </pre>
-            <A HREF="ENQUIRY.HTML" TARGET="BLANK">
-            <IMG SRC="FROM TITLE.jpg"><BR>click here</a>
-    </div>
+  <!-- 🔸 Course Page -->
+  <section class="course">
+    <h1>COURSE PAGE</h1>
+    <p>Our courses are given here.</p>
+    <img src="COURSE PAGE TITLE.png" alt="Course Page">
+    <br><a href="coursepage.html" target="_blank">Click here</a>
+  </section>
 
-    <div class="news">
-        <h1>NEWS!</h1>
-        <pre>
-        This file contains the latest news updates
-        collected and presented in an easy-to-read format.
-        All important events and announcements are included for quick reference.
-        </pre>
-       <A HREF="news.html" TARGET="BLANK">
-       <IMG SRC="News TITLE.png"><BR>click here</a>
-    </div>
+  <!-- 🔸 Enquiry Form -->
+  <section class="form">
+    <h1>ENQUIRY FORM</h1>
+    <pre>
+Join <b>Aadipom Computer Academy</b> today and build your computer skills
+with expert training in MS Office, Tally, Programming & Web Designing.
+Fill up the form now to book your seat and start learning with us!
+    </pre>
+    <a href="ENQUIRY.HTML" target="_blank">
+      <img src="FROM TITLE.jpg" alt="Enquiry Form"><br>Click here
+    </a>
+  </section>
 
-    <div class="index">
-        <h1>INDEX</h1>
-        <A HREF="index.html" TARGET="BLANK">
-        <IMG SRC="INDEX TITLE.jpg"><BR>click here</a>
-    </div>
+  <!-- 🔸 News Section -->
+  <section class="news">
+    <h1>NEWS!</h1>
+    <pre>
+This file contains the latest news updates
+collected and presented in an easy-to-read format.
+All important events and announcements are included for quick reference.
+    </pre>
+    <a href="news.html" target="_blank">
+      <img src="News TITLE.png" alt="News"><br>Click here
+    </a>
+  </section>
 
-    <div class="marquee">
-        <h1>MARQUEE</h1>
-        <A HREF="MARQUEE.html" TARGET="_BLANK">
-        <IMG SRC="MARQUEE TITLE.png"><BR>chick here</a>
-    </div>
+  <!-- 🔸 Index -->
+  <section class="index">
+    <h1>INDEX</h1>
+    <a href="index.html" target="_blank">
+      <img src="INDEX TITLE.jpg" alt="Index"><br>Click here
+    </a>
+  </section>
 
-    <div class="image">
-        <h1>WEB IMAGES</h1>
-        <pre>
-            this file contains a collection of images related to the topic,
-            arranged clearly for easy viewing and reference.
-            Please check the file to explore all the visuals provided.
-        </pre>
-            <A HREF="IMAGE.html" TARGET="_BLANK">
-            <IMG SRC="IMAGE TITLE.jpg"><BR>click here</a>
-    </div>
-    
+  <!-- 🔸 Marquee -->
+  <section class="marquee">
+    <h1>MARQUEE</h1>
+    <a href="MARQUEE.html" target="_blank">
+      <img src="MARQUEE TITLE.png" alt="Marquee"><br>Click here
+    </a>
+  </section>
+
+  <!-- 🔸 Image Section -->
+  <section class="image">
+    <h1>WEB IMAGES</h1>
+    <pre>
+This file contains a collection of images related to the topic,
+arranged clearly for easy viewing and reference.
+Please check the file to explore all the visuals provided.
+    </pre>
+    <a href="IMAGE.html" target="_blank">
+      <img src="IMAGE TITLE.jpg" alt="Images"><br>Click here
+    </a>
+  </section>
+
+  <footer>
+    © 2025 Aadipom Computer | All Rights Reserved
+  </footer>
+
 </body>
-
 </html>
