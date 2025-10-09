@@ -10,22 +10,24 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
+      font-family: 'Poppins', Arial, sans-serif;
     }
 
     body {
-      background: #f8f3ed;
-      color: #3c3c3c;
+      color: #4d6b58;
+      background: #f2e6d8;
       line-height: 1.6;
     }
 
-    /* 🔹 Navbar */
+    /* 🔹 Navbar Styling */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #b99173;
-      padding: 14px 40px;
+      padding: 10px 40px;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -34,58 +36,103 @@
     .logo {
       color: white;
       font-size: 26px;
-      font-weight: bold;
+      font-weight: 700;
       letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+    }
+
+    .logo:hover {
+      color: #ffe3c0;
+      transform: scale(1.05);
     }
 
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 30px;
+      gap: 25px;
     }
 
     .nav-links a {
       text-decoration: none;
       color: white;
-      font-weight: 500;
+      font-weight: bold;
       font-size: 16px;
-      transition: 0.3s ease;
+      padding: 8px 18px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
     }
 
     .nav-links a:hover {
-      color: #ffe7c4;
+      background-color: #e5c1a0;
+      color: #3e2b22;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
 
-    /* 🔹 Page Layout */
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: 50px auto;
+    /* 🔹 Sections */
+    section {
       text-align: center;
+      margin: 40px auto;
+      max-width: 900px;
+      background: #fffdf9;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
+    /* ✨ Animated Header Text */
     h1 {
-      font-size: 28px;
-      color: #4a735b;
-      margin-bottom: 10px;
+      font-size: 2em;
+      font-weight: 700;
+      background: linear-gradient(90deg, #a67c52, #5d866c, #b99173);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px rgba(255,255,255,0.5);
+      animation: fadeSlideIn 2s ease forwards, gradientMove 6s linear infinite;
     }
 
-    p {
-      margin-bottom: 20px;
-      font-size: 16px;
-      color: #444;
+    @keyframes fadeSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    pre {
+      white-space: pre-wrap;
+      font-size: 15px;
+      color: #555;
     }
 
     img {
-      width: 80%;
-      max-width: 500px;
-      border-radius: 12px;
-      margin-top: 15px;
+      max-width: 80%;
+      border-radius: 15px;
+      margin-top: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
       transition: transform 0.3s ease;
     }
 
     img:hover {
-      transform: scale(1.04);
+      transform: scale(1.05);
     }
 
     a {
@@ -101,17 +148,18 @@
     footer {
       text-align: center;
       padding: 20px;
-      background: #b99173;
+      margin-top: 50px;
+      background: #c2a68c;
       color: white;
-      margin-top: 60px;
       font-size: 14px;
+      border-radius: 15px 15px 0 0;
     }
 
-    /* 🔸 Responsive */
+    /* 🔸 Responsive Design */
     @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
-        padding: 10px 20px;
+        padding: 15px 20px;
       }
 
       .nav-links {
@@ -124,12 +172,13 @@
         margin-bottom: 10px;
       }
 
-      .container {
-        margin: 30px 20px;
+      section {
+        margin: 20px;
+        padding: 20px;
       }
 
-      img {
-        width: 100%;
+      h1 {
+        font-size: 1.6em;
       }
     }
   </style>
@@ -147,39 +196,79 @@
     </ul>
   </nav>
 
-  <!-- 🔸 Content -->
-  <div class="container">
+  <!-- 🔸 Header -->
+  <section class="header">
     <h1>Welcome to Aadipom Computer</h1>
-    <p>
-      Our Computer Academy provides high-quality training in basic to advanced computer skills.<br>
-      We offer courses like MS Office, Internet, Programming, Web Designing, and Tally.<br>
-      Our aim is to give students practical knowledge with career-oriented learning.<br>
-      We focus on personal attention, experienced teachers, and affordable fees.
-    </p>
+    <pre>
+Our Computer Academy provides high-quality training in basic to advanced computer skills.
+We offer courses like MS Office, Internet, Programming, Web Designing, and Tally.
+Our aim is to give students practical knowledge with career-oriented learning.
+We focus on personal attention, experienced teachers, and affordable fees.
+    </pre>
+  </section>
 
-    <h1>Course Page</h1>
+  <!-- 🔸 Course -->
+  <section class="course">
+    <h1>COURSE PAGE</h1>
     <p>Our courses are given here.</p>
-    <img src="COURSE PAGE TITLE.png" alt="Course Page"><br>
-    <a href="coursepage.html" target="_blank">Click here</a>
+    <img src="COURSE PAGE TITLE.png" alt="Course Page">
+    <br><a href="coursepage.html" target="_blank">Click here</a>
+  </section>
 
-    <h1 style="margin-top:40px;">Enquiry Form</h1>
-    <p>
-      Join Aadipom Computer Academy today and build your computer skills
-      with expert training in MS Office, Tally, Programming & Web Designing.
-    </p>
+  <!-- 🔸 Enquiry -->
+  <section class="form">
+    <h1>ENQUIRY FORM</h1>
+    <pre>
+Join <b>Aadipom Computer Academy</b> today and build your computer skills
+with expert training in MS Office, Tally, Programming & Web Designing.
+Fill up the form now to book your seat and start learning with us!
+    </pre>
     <a href="ENQUIRY.HTML" target="_blank">
       <img src="FROM TITLE.jpg" alt="Enquiry Form"><br>Click here
     </a>
+  </section>
 
-    <h1 style="margin-top:40px;">News</h1>
-    <p>
-      This file contains the latest news updates collected and presented clearly
-      for easy reading. All important announcements and events are included.
-    </p>
+  <!-- 🔸 News -->
+  <section class="news">
+    <h1>NEWS!</h1>
+    <pre>
+This file contains the latest news updates
+collected and presented in an easy-to-read format.
+All important events and announcements are included for quick reference.
+    </pre>
     <a href="news.html" target="_blank">
       <img src="News TITLE.png" alt="News"><br>Click here
     </a>
-  </div>
+  </section>
+
+  <!-- 🔸 Index -->
+  <section class="index">
+    <h1>INDEX</h1>
+    <a href="index.html" target="_blank">
+      <img src="INDEX TITLE.jpg" alt="Index"><br>Click here
+    </a>
+  </section>
+
+  <!-- 🔸 Marquee -->
+  <section class="marquee">
+    <h1>MARQUEE</h1>
+    <a href="MARQUEE.html" target="_blank">
+      <img src="MARQUEE TITLE.png" alt="Marquee"><br>Click here
+    </a>
+  </section>
+
+  <!-- 🔸 Image -->
+  <section class="image">
+    <h1>WEB IMAGES</h1>
+    <pre>
+This file contains a collection of images related to the topic,
+arranged clearly for easy viewing and reference.
+Please check the file to explore all the visuals provided.
+    </pre>
+    <a href="IMAGE.html" target="_blank">
+      <img src="IMAGE TITLE.jpg" alt="Images"><br>Click here
+    </a>
+  </section>
 
   <footer>
     © 2025 Aadipom Computer | All Rights Reserved
