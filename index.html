@@ -25,48 +25,76 @@
       justify-content: space-between;
       align-items: center;
       background-color: #b99173;
-      padding: 10px 40px;
-      border-radius: 0 0 15px 15px;
+      padding: 8px 30px;
+      border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       position: sticky;
-      top: 0;
+      top: 10px;
+      margin: 10px 30px; /* 👉 side & top spacing */
       z-index: 1000;
     }
 
+    /* ✨ Logo Design */
     .logo {
-      color: white;
+      position: relative;
       font-size: 26px;
-      font-weight: 700;
-      letter-spacing: 2px;
+      font-weight: 800;
       text-transform: uppercase;
-      transition: 0.3s ease;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #fff0c2, #ffcf91, #ffe3c0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px rgba(255,255,255,0.6);
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    /* ✨ Logo shine animation */
+    .logo::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+      transform: skewX(-25deg);
+      animation: shine 4s infinite;
+    }
+
+    @keyframes shine {
+      0% { left: -75%; }
+      50% { left: 125%; }
+      100% { left: 125%; }
     }
 
     .logo:hover {
-      color: #ffe3c0;
       transform: scale(1.05);
+      text-shadow: 0 0 15px rgba(255,255,255,0.8);
+      transition: all 0.3s ease;
     }
 
+    /* 🔹 Navbar Links */
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 25px;
+      gap: 20px;
     }
 
     .nav-links a {
       text-decoration: none;
       color: white;
-      font-weight: bold;
-      font-size: 16px;
-      padding: 8px 18px;
-      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 6px 14px;
+      border-radius: 8px;
       transition: all 0.3s ease;
     }
 
     .nav-links a:hover {
       background-color: #e5c1a0;
       color: #3e2b22;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
     /* 🔹 Sections */
@@ -106,15 +134,9 @@
     }
 
     @keyframes gradientMove {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     pre {
@@ -159,17 +181,20 @@
     @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
-        padding: 15px 20px;
+        margin: 10px 15px;
+        padding: 10px 15px;
+        border-radius: 12px;
       }
 
       .nav-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
+        gap: 10px;
       }
 
       .logo {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+        font-size: 22px;
       }
 
       section {
@@ -272,6 +297,7 @@ Please check the file to explore all the visuals provided.
 
   <footer>
     © 2025 Aadipom Computer | All Rights Reserved
+    Made By MURSED🥲🫠
   </footer>
 
 </body>
