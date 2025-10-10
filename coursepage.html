@@ -1,63 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COURSE PAGE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #008080; /* Teal background */
+      color: #fff;
+    }
 
-<html>
-<head><title>COURSE PAGE</title></head>
+    marquee {
+      font-size: 2rem;
+      color: #ff69b4; /* Pink color */
+      font-weight: bold;
+    }
 
-<body bgcolor="teal">
-<FONT SIZE="32"COLOR="PINK">
-<marquee>WELL COME TO AADIPOM COMPUTER ACADEMY</marquee>
-</FONT>
+    hr {
+      border: 2px solid #fff;
+      margin: 20px 0;
+    }
 
-<HR>
+    table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
 
-<table border="4" ALIGN="center">
-<tr><tH><BIG>CERTIFICATE IN ACCOUNT OPERATION (C.A.O)</BIG></tH></tr></table>
+    th, td {
+      padding: 12px 15px;
+      text-align: center;
+      border: 2px solid #fff;
+    }
 
-<table border="2" ALIGN="center">
+    th {
+      background-color: #ff69b4;
+      color: #000;
+      font-size: 1.2rem;
+    }
 
-<TR><TD>CODE</TD><TD>ELIGIBILITY</TD><TD>COURSE</TD><TD>FEES</TD></TR>
-<TR><TD>1</TD><TD>CLASS III TO IV</TD><TD>COMPUTER FUNDAMENTAL</TD><TD>4500/-</TD></TR>
-<TR><TD>2</TD><TD>CLASS V TO VIII</TD><TD>MS. PAINT</TD><TD>50,000/-</TD></TR>
-<TR><TD>3</TD><TD>CLASS IX TO X</TD><TD>CONCEPT OF ACCOUNTING</TD><TD>80,000/-</TD></TR>
-<TR><TD>4</TD><TD>CLASS XI TO XII</TD><TD>TALLY</TD><TD>1,00,000/-</TD></TR>
-<TR><TD>5</TD><TD>CLASS XI TO XII</TD><TD>INTERNET AND EMAIL</TD><TD>1,20,000/-</TD></TR>
+    td {
+      background-color: #20b2aa; /* Light teal */
+    }
+
+    tr:hover td {
+      background-color: #ff8c00; /* Orange hover */
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    a {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    a:hover {
+      background-color: #ff1493;
+      color: #fff;
+    }
+
+    /* Footer social icons */
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    footer a img {
+      margin: 0 10px;
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    footer a img:hover {
+      transform: scale(1.2);
+      filter: brightness(1.5);
+    }
+
+    /* Responsive for mobile */
+    @media (max-width: 768px) {
+      th, td {
+        font-size: 0.9rem;
+        padding: 8px;
+      }
+
+      marquee {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<marquee>WELCOME TO AADIPOM COMPUTER ACADEMY</marquee>
+<hr>
+
+<!-- Certificate in Account Operation -->
+<table>
+  <tr><th colspan="4">CERTIFICATE IN ACCOUNT OPERATION (C.A.O)</th></tr>
+  <tr>
+    <th>CODE</th>
+    <th>ELIGIBILITY</th>
+    <th>COURSE</th>
+    <th>FEES</th>
+  </tr>
+  <tr><td>1</td><td>CLASS III TO IV</td><td>COMPUTER FUNDAMENTAL</td><td>4500/-</td></tr>
+  <tr><td>2</td><td>CLASS V TO VIII</td><td>MS. PAINT</td><td>50,000/-</td></tr>
+  <tr><td>3</td><td>CLASS IX TO X</td><td>CONCEPT OF ACCOUNTING</td><td>80,000/-</td></tr>
+  <tr><td>4</td><td>CLASS XI TO XII</td><td>TALLY</td><td>1,00,000/-</td></tr>
+  <tr><td>5</td><td>CLASS XI TO XII</td><td>INTERNET AND EMAIL</td><td>1,20,000/-</td></tr>
 </table>
 
-<BR></BR>
+<!-- Diploma in Office Management -->
+<table>
+  <tr><th colspan="3">DIPLOMA IN OFFICE MANAGEMENT (D.O.M)</th></tr>
+  <tr><th>SL.NO</th><th>COURSE</th><th>FEES</th></tr>
+  <tr><td>1</td><td>Computer Fundamentals and MS Word</td><td>10,000/-</td></tr>
+  <tr><td>2</td><td>MS Windows</td><td>12,000/-</td></tr>
+  <tr><td>3</td><td>TALLY PRIME</td><td>12,500/-</td></tr>
+  <tr><td>4</td><td>Web Design</td><td>15,000/-</td></tr>
+  <tr><td>5</td><td>CorelDRAW</td><td>10,000/-</td></tr>
+  <tr><td>6</td><td>Photoshop</td><td>12,000/-</td></tr>
+</table>
 
-<TABLE BORDER="4" ALIGN="CENTER">
-<tr><th>DIPLOMA IN OFFICE MANAGEMENT (D.O.M)</th></tr></TABLE>
-<TABLE BORDER="4" ALIGN="CENTER">
-<TR><TH>SL.NO</TH><TD>COURSE</TD><TD>FEES</TD></TR>
-<TR><TD>1</TD><td>computer fundamentals and ms.word</td></TR>
-<TR><TD>2</TD><TD>MS.WINDOW</TD></TR>
-<TR><TD>3</TD><TD>TALLY PRIME</TD><TD>12500/-</TD></TR>
-<TR><TD>4</TD><TD>WEB DESIGN</TD></TR>
-<TR><TD>5</TD><TD>CORAL DRAW</TD></TR>
-<TR><TD>6</TD><TD>PHOTOSHOP</TD></TR>
-</TABLE>
+<!-- Certificate in Desktop Publishing -->
+<table>
+  <tr><th colspan="3">CERTIFICATE IN DESKTOP PUBLISHING (C.D.T.P)</th></tr>
+  <tr><th>SL.NO</th><th>COURSE</th><th>FEES</th></tr>
+  <tr><td>1</td><td>Computer Fundamentals</td><td>8,000/-</td></tr>
+  <tr><td>2</td><td>Windows</td><td>9,000/-</td></tr>
+  <tr><td>3</td><td>CorelDRAW</td><td>99,999/-</td></tr>
+  <tr><td>4</td><td>Adobe Photoshop</td><td>25,000/-</td></tr>
+  <tr><td>5</td><td>MS Word</td><td>10,000/-</td></tr>
+</table>
 
-<BR></BR>
-<TABLE BORDER="4" ALIGN="CENTER"><TR><TH>CERTIFICATE IN DESKTOP PUBLISHING(C.D.T.P)</TH></TR></TABLE>
-<TABLE BORDER="4" ALIGN="CENTER">
-<TR><TD>SL.NO</TD><TD>COURSE</TD><TD>FEES</TD></TR>
-<TR><TD>1</TD><TD>COMPUTER FUNDAMENTALS</TD></TR>
-<TR><TD>2</TD><TD>WINDOWS</TD></TR>
-<TR><TD>3</TD><TD>CORAL DRAW</TD></TD><TD>99,999/-</TD></TR>
-<TR><TD>4</TD><TD>ADOBE PHOTOSHOP</TD></TR>
-<TR><TD>5</TD><TD>MS-WORD</TD></TR>
-</TABLE>
+<!-- High-Paying Computer Courses -->
+<table>
+  <tr><th colspan="3">HIGH-PAYING COMPUTER COURSES</th></tr>
+  <tr><th>SL.NO</th><th>COURSE</th><th>FEES</th></tr>
+  <tr><td>1</td><td>Artificial Intelligence & Machine Learning</td><td>2,50,000/-</td></tr>
+  <tr><td>2</td><td>Cybersecurity & Ethical Hacking</td><td>1,80,000/-</td></tr>
+  <tr><td>3</td><td>Data Science & Big Data Analytics</td><td>2,00,000/-</td></tr>
+  <tr><td>4</td><td>Cloud Computing (AWS/Azure)</td><td>1,50,000/-</td></tr>
+</table>
 
-<A HREF="home page.HTML">HOME</A>
+<!-- Web Development Courses -->
+<table>
+  <tr><th colspan="3">WEB DEVELOPMENT COURSES</th></tr>
+  <tr><th>SL.NO</th><th>COURSE</th><th>FEES</th></tr>
+  <tr><td>1</td><td>HTML, CSS, JavaScript</td><td>50,000/-</td></tr>
+  <tr><td>2</td><td>React JS & Node JS</td><td>80,000/-</td></tr>
+  <tr><td>3</td><td>Full Stack Web Development</td><td>1,20,000/-</td></tr>
+</table>
+
+<!-- Mobile App Development Courses -->
+<table>
+  <tr><th colspan="3">MOBILE APP DEVELOPMENT</th></tr>
+  <tr><th>SL.NO</th><th>COURSE</th><th>FEES</th></tr>
+  <tr><td>1</td><td>Android App Development</td><td>90,000/-</td></tr>
+  <tr><td>2</td><td>iOS App Development</td><td>1,00,000/-</td></tr>
+  <tr><td>3</td><td>Flutter Cross-Platform Apps</td><td>1,20,000/-</td></tr>
+</table>
+
+<!-- Game Development Courses -->
+<table>
+  <tr><th colspan="3">GAME DEVELOPMENT COURSES</th></tr>
+  <tr><th>SL.NO</th><th>COURSE</th><th>FEES</th></tr>
+  <tr><td>1</td><td>Unity 3D Game Development</td><td>1,50,000/-</td></tr>
+  <tr><td>2</td><td>Unreal Engine 5</td><td>2,00,000/-</td></tr>
+  <tr><td>3</td><td>Game Design & Animation</td><td>1,20,000/-</td></tr>
+</table>
+
+<div style="text-align:center;">
+  <a href="home page.HTML">HOME</a>
+</div>
+
+<!-- Footer with social icons and hover effect -->
+<footer>
+  &copy; 2025 Aadipom Computer Academy | All Rights Reserved <br><br>
+  Contact us: 
+  <a href="https://www.instagram.com/invites/contact/?igsh=1dvfwcjz57jtz&utm_content=ihsl0i2" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="24">
+  </a>
+  <a href="#" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="24">
+  </a>
+  <a href="#" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="24">
+  </a>
+  <a href="#" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="24">
+  </a>
+</footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
