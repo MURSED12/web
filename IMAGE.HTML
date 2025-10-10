@@ -1,59 +1,179 @@
-<html>
-<head><title>image</title></head>
-<body bgcolor="LIGHTBLUE">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Image Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+    }
 
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-<TABLE BORDER="8" ALIGN="LEFT ">
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-<TR><TD><MARQUEE>
-<A HREF="BIG PHOTO.HTML" TARGET="_BLANK"><img src="A.png"></A>
-</MARQUEE></TD></TR>
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      border: 4px solid #333;
+      border-radius: 10px;
+    }
 
-<TR><TD>
-<A HREF="BIG PHOTO 5.HTML" TARGET="_BLANK"><img src="B.jpg"></A>
-</TD></TR>
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
 
-<TR><TD><MARQUEE>
-<img src="C.jpg">
-</MARQUEE></TD></TR>
-</TABLE>
+    /* Optional caption (visible on hover) */
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 5px 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 14px;
+    }
 
-<TABLE BORDER="8" ALIGN="RIGHT">
-<TR><TD><MARQUEE><IMG SRC="D.jpg"></MARQUEE></TD></TR>
+    .gallery-item:hover .caption {
+      opacity: 1;
+    }
 
-<TR><TD>
-<A HREF="BIG PHOTO 3.HTML" TARGET="_BLANK"><IMG SRC="E.jpg"></A>
-</TD></TR>
+    /* Animate class - replaces <marquee> */
+    .animate {
+      animation: slide 3s ease-in-out infinite alternate;
+    }
 
-<TR><TD><MARQUEE>
-<A HREF="BIG PHOTO 4.HTML" TARGET="_BLANK"><IMG SRC="F.jpg"></A>
-</MARQUEE></TD></TR>
-</TABLE>
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(15px); }
+    }
 
+    .home-link {
+      display: block;
+      text-align: center;
+      margin: 30px auto;
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #000;
+    }
 
-<TABLE BORDER="8" ALIGN="LEFT">
+    .home-link:hover {
+      color: darkblue;
+      text-decoration: underline;
+    }
 
-<TR><TD>
-<A HREF="BIG PHOTO 7.HTML" TARGET="_BLANK"><IMG SRC="G.jpg"></A>
-</TD></TR>
+    @media (hover: none) {
+      .gallery-item:hover {
+        transform: none;
+        box-shadow: none;
+      }
 
-<TR><TD><IMG SRC="H.jpg"></TD></TR>
+      .gallery-item:hover .caption {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
 
-<TR><TD>
-<A HREF="BIG PHOTO 6.HTML" TARGET="_BLANK"><IMG SRC="I.jpg"></A>
-</TD></TR>
+  <div class="gallery">
+    <div class="gallery-item animate">
+      <a href="BIG PHOTO.HTML" target="_blank">
+        <img src="A.png" alt="A">
+        <div class="caption">Image A</div>
+      </a>
+    </div>
 
-</TABLE>
+    <div class="gallery-item">
+      <a href="BIG PHOTO 5.HTML" target="_blank">
+        <img src="B.jpg" alt="B">
+        <div class="caption">Image B</div>
+      </a>
+    </div>
 
-<TABLE BORDER="8" ALIGN="RIGHT DOWN">
-<TR><TD><IMG SRC="J.png"></TD></TR>
-<TR><TD><IMG SRC="M.jpg"></TD></TR>
-<TR><TD><A HREF="BIG PHOTO 1.HTML" TARGET="_BLANK"><IMG SRC="N.jpg"></A></TD></TR>
+    <div class="gallery-item animate">
+      <img src="C.jpg" alt="C">
+      <div class="caption">Image C</div>
+    </div>
 
-</TABLE>
+    <div class="gallery-item animate">
+      <img src="D.jpg" alt="D">
+      <div class="caption">Image D</div>
+    </div>
 
-<A HREF="home page.HTML">HOME</A>
+    <div class="gallery-item">
+      <a href="BIG PHOTO 3.HTML" target="_blank">
+        <img src="E.jpg" alt="E">
+        <div class="caption">Image E</div>
+      </a>
+    </div>
+
+    <div class="gallery-item animate">
+      <a href="BIG PHOTO 4.HTML" target="_blank">
+        <img src="F.jpg" alt="F">
+        <div class="caption">Image F</div>
+      </a>
+    </div>
+
+    <div class="gallery-item">
+      <a href="BIG PHOTO 7.HTML" target="_blank">
+        <img src="G.jpg" alt="G">
+        <div class="caption">Image G</div>
+      </a>
+    </div>
+
+    <div class="gallery-item">
+      <img src="H.jpg" alt="H">
+      <div class="caption">Image H</div>
+    </div>
+
+    <div class="gallery-item">
+      <a href="BIG PHOTO 6.HTML" target="_blank">
+        <img src="I.jpg" alt="I">
+        <div class="caption">Image I</div>
+      </a>
+    </div>
+
+    <div class="gallery-item">
+      <img src="J.png" alt="J">
+      <div class="caption">Image J</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="M.jpg" alt="M">
+      <div class="caption">Image M</div>
+    </div>
+
+    <div class="gallery-item">
+      <a href="BIG PHOTO 1.HTML" target="_blank">
+        <img src="N.jpg" alt="N">
+        <div class="caption">Image N</div>
+      </a>
+    </div>
+  </div>
+
+  <a class="home-link" href="home page.HTML">HOME</a>
+
 </body>
-
 </html>
-
