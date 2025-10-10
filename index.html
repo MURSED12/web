@@ -25,12 +25,12 @@
       justify-content: space-between;
       align-items: center;
       background-color: #708993;
-      padding: 8px 30px;
+      padding: 8px 20px;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       position: sticky;
       top: 10px;
-      margin: 10px 30px; /* 👉 side & top spacing */
+      margin: 10px 20px; /* 👉 side & top spacing */
       z-index: 1000;
     }
 
@@ -179,31 +179,31 @@
 
     /* 🔸 Responsive Design */
     @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        margin: 10px 15px;
-        padding: 10px 15px;
-        border-radius: 12px;
-      }
+  .navbar {
+    flex-wrap: nowrap; 
+    margin: 10px 15px;
+    padding: 6px 12px; 
+    border-radius: 12px;
+  }
 
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-      }
+  .nav-links {
+    justify-content: center;
+    gap: 8px;
+  }
 
-      .logo {
-        margin-bottom: 8px;
-        font-size: 22px;
-      }
+  .logo {
+    font-size: 22px;
+  }
 
-      section {
-        margin: 20px;
-        padding: 20px;
-      }
+  section {
+    margin: 20px;
+    padding: 20px;
+  }
 
-      h1 {
-        font-size: 1.6em;
+  h1 {
+    font-size: 1.6em;
+  }
+    }
       }
     }
   </style>
@@ -302,3 +302,4 @@ Please check the file to explore all the visuals provided.
 
 </body>
 </html>
+
